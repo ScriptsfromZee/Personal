@@ -1,4 +1,4 @@
-// Declare variables and assign numbers
+// Declared variables and assigned numbers
 let num1 = 50;
 let num2 = 5;
 
