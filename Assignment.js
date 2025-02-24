@@ -2,7 +2,7 @@
 let num1 = 50;
 let num2 = 5;
 
-//To Perform operations, we 
+//To Perform operations
 let addition = num1 + num2;
 let subtraction = num1 - num2;
 let multiplication = num1 * num2;
