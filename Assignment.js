@@ -10,8 +10,8 @@ let division = num1 / num2;
 let modulus = num1 % num2;
 
 // To Display the results we call on any of the following 
-console.log("Addition = ", addition);
-console.log("Subtraction = ", subtraction);
-console.log("Multiplication = ", multiplication);
-console.log("Division = ", division);
-console.log("Modulus = ", modulus);
+console.log("The Result of the Addition = ", addition);
+console.log("The Result of the Subtraction = ", subtraction);
+console.log("The Result of the Multiplication = ", multiplication);
+console.log("The Result of the Division = ", division);
+console.log("The Result of the Modulus = ", modulus);
