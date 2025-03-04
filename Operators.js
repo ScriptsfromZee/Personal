@@ -21,3 +21,11 @@ if (person1 === 'James' && person2 === 'Victor') {
 } else {
     console.log('One condition is false');
 }
+
+let name = "Jones"
+let age = 17
+if ( name == "Jones" || age == 17){
+    console.log ( 'He is too young to drive')
+} else {
+    console.log('He can drive home')
+}
