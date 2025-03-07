@@ -9,3 +9,12 @@ console.log(animals.length); // This tells us how many elements are in the array
 
 animals.push("bear");// This adds another element to the array
 console.log(animals)
+
+animals.unshift("horse")
+console.log(animals) // This adds horse as the first element in the array
+
+animals.pop()// This removes the last element in the array
+console.log(animals) 
+
+animals.shift() // this removes the first element in the array
+console.log(animals)
