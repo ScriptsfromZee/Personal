@@ -18,3 +18,7 @@ console.log(animals)
 
 animals.shift() // this removes the first element in the array
 console.log(animals)
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
