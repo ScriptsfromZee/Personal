@@ -20,5 +20,9 @@ animals.shift() // this removes the first element in the array
 console.log(animals)
 
 for (let i = 0; i < animals.length; i++) {
-    console.log(animals[i]);
+    console.log(animals[i]); 
+    // This prints the current value of an element in the array at every given point as long as i < the length of the array
 }
+
+animals.forEach(animal => console.log(animal));
+// This goes through the array and prints each animal in the array to the console
