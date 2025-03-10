@@ -1,8 +1,8 @@
 const person = {
-    firstName: "David",
-    lastName: "Felix",
-    age: 30,
-    eyeColor: "blue",
+    firstName: "Chizogam",
+    lastName: "Derek",
+    age: 23,
+    eyeColor: "brown",
     favColour: "blue",
     shortDescription : function() {
         console.log ("My name is" , this.firstName + " " + this.lastName + " and I like to play ball" )
