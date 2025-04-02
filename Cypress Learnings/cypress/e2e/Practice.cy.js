@@ -1,4 +1,4 @@
-describe("Practice Suite",() => {
+describe("Practice Suite 1",() => {
     it("Placed Order for Cashew", () => {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
         cy.get('.search-keyword').type("ca")
