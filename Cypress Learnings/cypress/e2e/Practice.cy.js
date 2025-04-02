@@ -8,7 +8,7 @@ describe("Practice Suite",() => {
         cy.contains("PROCEED TO CHECKOUT").click()
         cy.contains("Place Order").click()
         cy.get("select").select("Philippines")
-        cy.get(".chkAgree").click()
+        cy.get(".chkAgree").check().should('be.checked')
         cy.get("button").click()
 })     
 })
