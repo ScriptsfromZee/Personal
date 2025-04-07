@@ -4,18 +4,17 @@ describe("Practice Suite 1",() => {
         cy.get('.search-keyword').type("ca")
         cy.get(".product:visible").should('have.length', 4) // this checks that four visible items are shown when "ca" is serached for
         cy.contains('.product-name', 'Cashews').parents('.product').find('button').click() // this looks for the product name that has "cashews" and adds it to cart
-        cy.get(".cart-icon").click()
+        cy.get(".cart-icon").click() // This is the add to cart button 
         cy.contains("PROCEED TO CHECKOUT").click()
         cy.contains("Place Order").click()
-        cy.get("select").select("Philippines")
+        cy.get("select").select("Philippines") // This selects philippines from the list of countries when the drop down is clicked. 
         cy.get(".chkAgree").check().should('be.checked')
         cy.get("button").click()
 })     
-
-    it("Practice Actions for Cypress", () => {
+    it.only("Practice Actions for Cypress", () => {
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
         cy.get("#mousehover").invoke("show")
-        cy.contains("Top").click()
+        cy.contains("Top").click({force: true}) // This force clicks the element named "Top" 
 
     })
 })
