@@ -1,5 +1,5 @@
 describe("Practice Suite 1",() => {
-    it.only("Placed Order for Cashew", () => {
+    it("Placed Order for Cashew", () => {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
         cy.get('.search-keyword').type("ca")
         cy.get(".product:visible").should('have.length', 4) // this checks that four visible items are shown when "ca" is serached for
@@ -11,11 +11,18 @@ describe("Practice Suite 1",() => {
         cy.get(".chkAgree").check().should('be.checked')
         cy.get("button").click()
 })     
-    it("Practice Actions for Cypress", () => {
+    it.only("Practice Actions for Cypress", () => {
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
         cy.get("#mousehover").invoke("show")
         cy.contains("Top").click({force: true}) // This force clicks the element named "Top" 
         cy.url("https://rahulshettyacademy.com/AutomationPractice/#top") // This checks if the URL changes after the button is click
+        cy.get("#opentab").invoke("removeAttr",'target').click()
+        cy.origin("https://www.qaclickacademy.com/", () => {
+            cy.get("#navbarSupportedContent").contains("Blog").click()
+        })
+})
 
-    })
+
+
+
 })
