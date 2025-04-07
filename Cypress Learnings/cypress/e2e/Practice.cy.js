@@ -18,7 +18,7 @@ describe("Practice Suite 1",() => {
         cy.url("https://rahulshettyacademy.com/AutomationPractice/#top") // This checks if the URL changes after the button is click
         cy.get("#opentab").invoke("removeAttr",'target').click()
         cy.origin("https://www.qaclickacademy.com/", () => {
-            cy.get("#navbarSupportedContent").contains("Blog").click()
+            cy.get("#navbarSupportedContent").contains("Blog").click() // origin tells cypress that a new url is to be used. 
         })
 })
 
