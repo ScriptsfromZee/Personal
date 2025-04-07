@@ -11,4 +11,11 @@ describe("Practice Suite 1",() => {
         cy.get(".chkAgree").check().should('be.checked')
         cy.get("button").click()
 })     
+
+    it("Practice Actions for Cypress", () => {
+        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+        cy.get("#mousehover").invoke("show")
+        cy.contains("Top").click()
+
+    })
 })
