@@ -52,21 +52,31 @@ describe("Practice Suite 1", () => {
       cy.get("#navbarSupportedContent").contains("Blog").click(); // origin tells cypress that a new url is to be used.
       cy.contains("QAClickAcademy Blog").should("be.visible");
     });
+  });
+
+  //This is how you select options from dropdowns in static dropdowns
+  it("Static Dropdown", () => {
+    cy.visit("https://letcode.in/dropdowns");
+    cy.get("#country").select("India").should("have.value", "India");
+  });
+
+  // This is how you handle dynamic dropdowns in cypress
+  it("Dynamic Dropdown ", () => {
+    cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
+    cy.get("#autocomplete").type("in");
+    cy.get(".ui-menu-item").each(($e1, index, $list) => {
+      if ($e1.text() === "Dominica") {
+        cy.wrap($e1).click().should("have.text", "Dominica");
+      }
+    })
   })
 
-    //This is how you select options from dropdowns
-    it.only("Dynamic Dropdown", () => {
-      cy.visit("https://letcode.in/dropdowns");
-      cy.get("#country").select("India").should("have.value", "India");
-      
-    });
-
     // This is how you handle tables in cypress
-    it("Getting Values from Tables", function () {
+    it.only("Getting Values from Tables", function () {
       cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
       cy.get("tr td:nth-child(2)").each(($e1, index, $list) => {
         const text = $e1.text();
-        if (text.includes("Python")) {
+        if (text.includes("Bugzilla")) {
           cy.get("tr td:nth-child(2)")
             .eq(index)
             .next()
@@ -77,7 +87,6 @@ describe("Practice Suite 1", () => {
         }
       });
     });
-
 
     it("Verify date selection", () => {
       const monthNumber = "6";
